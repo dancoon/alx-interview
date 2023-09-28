@@ -3,16 +3,18 @@
 
 
 def pascal_triangle(n):
-    """ A function that draws the pascal's triangle """
-    ans = []
+    '''Draws Pascal's Triangle'''
+    arr = []
     if n <= 0:
-        return []
-    res = [1]
-    ans.append(res)
-    for i in range(n):
-        temp = [0] + res + [0]
-        res = []
+        return arr
+
+    result = [1]
+    arr.append(result)
+    for i in range(1, n):
+        temp = [0] + result + [0]
+        result = []
         for j in range(len(temp) - 1):
-            res.append(temp[j] + temp[j + 1])
-        ans.append(res)
-    return ans
+            result.append(temp[j] + temp[j + 1])
+        arr.append(result)
+
+    return arr
