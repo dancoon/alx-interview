@@ -10,8 +10,8 @@ def pascal_triangle(n):
     res = [1]
     ans.append(res)
     for i in range(n):
-        res = []
         temp = [0] + res + [0]
+        res = []
         for j in range(len(temp) - 1):
             res.append(temp[j] + temp[j + 1])
         ans.append(res)
